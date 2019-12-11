@@ -26,4 +26,4 @@ module Spree::Admin::BaseControllerDecorator
     end
 end
 
-::Spree::BaseController.prepend(Spree::BaseControllerDecorator)
+::Spree::BaseController.prepend(Spree::Admin::BaseControllerDecorator)
