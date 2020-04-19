@@ -4,7 +4,7 @@ RSpec.describe Spree::Admin::RolesController, type: :controller do
   let(:role) { mock_model(Spree::Role) }
   let(:roles) { [role] }
   let(:empty_roles) { [] }
-  let(:user) { mock_model(Spree::User, email: 'userkonga.com', password: "password", password_confirmation: "password", roles: roles) }
+  let(:user) { mock_model(Spree.user_class, email: 'userkonga.com', password: "password", password_confirmation: "password", roles: roles) }
   let(:permission) { mock_model(Spree::Permission) }
   let(:permission_set) { mock_model(Spree::PermissionSet) }
   let(:permissions) { [permission] }
