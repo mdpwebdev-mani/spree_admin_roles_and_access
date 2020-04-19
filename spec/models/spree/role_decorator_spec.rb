@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe Spree::Role, type: :model  do
 
-  let(:user) { Spree::User.create!(email: 'abc@test.com', password: 'password') }
+  let(:user) { Spree.user_class.create!(email: 'abc@test.com', password: 'password') }
   let(:ability) { Spree::Ability.new(user) }
   let(:role1) { Spree::Role.create!(name: 'user') { |role| role.is_default = true } }
   let(:permission1) { Spree::Permission.create!(title: 'can-manage-all', priority: 5) }

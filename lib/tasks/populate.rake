@@ -215,7 +215,7 @@ namespace :spree_roles do
             [:admin, :read], Spree::Product,
             [:admin, :read], Spree::Variant,
             [:admin, :read], Spree::ReimbursementType,
-            [:admin, :read, :edit, :new], Spree::User,
+            [:admin, :read, :edit, :new], Spree.user_class,
             [:admin, :manage], Spree::Order,
             [:admin, :manage], Spree::Payment,
             [:admin, :manage], Spree::Shipment,
@@ -326,7 +326,7 @@ namespace :spree_roles do
             [:admin], Spree::Store,
             [:admin, :manage], Spree::StoreCreditCategory,
             [:admin, :manage], Spree::StoreCredit,
-            [:admin, :read, :edit], Spree::User
+            [:admin, :read, :edit], Spree.user_class
           ]
         ),
         "Store Credit Managment",
