@@ -65,6 +65,7 @@ module Spree
 
     private
       def find_action_and_subject(name)
+        Spree::ReturnItem::EligibilityValidator::RMARequired # stop uninitialized constant error
         can, action, subject, attribute = name.to_s.split('-')
 
         if subject == 'all'
